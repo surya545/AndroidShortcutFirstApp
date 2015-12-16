@@ -62,13 +62,13 @@ public class MainActivity extends Activity {
 
     public void Call(View view) {
         Intent callIntent = new Intent();
-        callIntent.setData(Uri.parse("tel:9614826204"));
+        callIntent.setData(Uri.parse("tel:100"));
         callIntent.setAction(Intent.ACTION_CALL);
         startActivity(callIntent);
     }
-    public void Wifi(View view) {
+    public void Wallpaper(View view) {
         Intent intent = new Intent();
-        intent.setAction(Intent.WIFI_SERVICE);
+        intent.setAction(Intent.ACTION_SET_WALLPAPER);
         startActivity(intent);
     }
 }
