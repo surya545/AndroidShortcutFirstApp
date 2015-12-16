@@ -65,11 +65,9 @@
         android:src="@drawable/wi"
         android:onClick="Wifi"
         android:background="@null"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/imageButton3"
-        android:layout_alignEnd="@+id/imageButton3"
+        android:layout_alignTop="@+id/imageButton4"
         android:layout_toEndOf="@+id/imageButton2"
         android:layout_toRightOf="@+id/imageButton2"
-        android:layout_alignTop="@+id/imageButton4" />
+        android:layout_alignBottom="@+id/imageButton4" />
 
 </RelativeLayout>

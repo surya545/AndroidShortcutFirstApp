@@ -53,26 +53,22 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
-    public void Youtube() {
+    public void Youtube(View view) {
         Intent intent = new Intent();
         intent.setData(Uri.parse("http://www.youtube.com/"));
         intent.setAction(Intent.ACTION_VIEW);
         startActivity(intent);
     }
 
-    public void Call() {
-        Intent callIntent = new Intent(Intent.ACTION_CALL);
+    public void Call(View view) {
+        Intent callIntent = new Intent();
         callIntent.setData(Uri.parse("tel:9614826204"));
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
+        callIntent.setAction(Intent.ACTION_CALL);
         startActivity(callIntent);
+    }
+    public void Wifi(View view) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.WIFI_SERVICE);
+        startActivity(intent);
     }
 }
