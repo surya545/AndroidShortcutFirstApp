@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -17,10 +18,13 @@ import android.view.MenuItem;
 
 public class MainActivity extends Activity {
 
+
+    private MediaPlayer mp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mp=MediaPlayer.create(MainActivity.this,R.raw.a);
     }
 
     @Override
@@ -70,5 +74,8 @@ public class MainActivity extends Activity {
         Intent intent = new Intent();
         intent.setAction(Intent.ACTION_SET_WALLPAPER);
         startActivity(intent);
+    }
+    public void Music(View view) {
+        mp.start();
     }
 }
